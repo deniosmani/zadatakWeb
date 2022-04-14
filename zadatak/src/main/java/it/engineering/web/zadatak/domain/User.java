@@ -9,28 +9,23 @@ import javax.persistence.Id;
 @Entity
 public class User implements Serializable{
 	
+	
 	@Id
-	@Column(name = "IdU")
-	private int idU;
 	@Column(name = "username")
 	private String username;
 	@Column(name="password")
 	private String password;
-	public User(int idU, String username, String password) {
+	public User( String username, String password) {
 		super();
-		this.idU = idU;
+		
 		this.username = username;
 		this.password = password;
 	}
 	public User() {
 		super();
 	}
-	public int getIdU() {
-		return idU;
-	}
-	public void setIdU(int idU) {
-		this.idU = idU;
-	}
+	
+	
 	public String getUsername() {
 		return username;
 	}
@@ -45,7 +40,7 @@ public class User implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return "User [idU=" + idU + ", username=" + username + ", password=" + password + "]";
+		return "User [ username=" + username + ", password=" + password + "]";
 	}
 	
 }

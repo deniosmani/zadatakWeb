@@ -9,7 +9,7 @@ public class MyEntityManagerFactory {
 	private EntityManagerFactory emf;
 	
 	private MyEntityManagerFactory() {
-		emf = Persistence.createEntityManagerFactory("ProjectDay32");
+		emf = Persistence.createEntityManagerFactory("zadatak");
 	}
 	
 	public static EntityManagerFactory getEntityManagerFactory() {
