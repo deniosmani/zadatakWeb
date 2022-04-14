@@ -11,7 +11,7 @@
 <div>
 	<a href="http://localhost:8080/zadatak/prikaz.jsp">Prikazi sve proizvode</a>
 	<a href="http://localhost:8080/zadatak/unesi-novi.jsp">Unesi novi proizvod</a>
-	<a href="#">Brisanje proizvoda</a>
+	<a href="http://localhost:8080/zadatak/brisanje-po-sifri.jsp">Brisanje proizvoda</a>
 </div>
 </body>
 </html>

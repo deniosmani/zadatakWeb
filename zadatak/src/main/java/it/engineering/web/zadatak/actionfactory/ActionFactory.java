@@ -2,6 +2,7 @@ package it.engineering.web.zadatak.actionfactory;
 
 import it.engineering.web.zadatak.action.AbstractAction;
 import it.engineering.web.zadatak.action.login.AddProizvodAction;
+import it.engineering.web.zadatak.action.login.DeleteProizvodAction;
 import it.engineering.web.zadatak.action.login.HomeAction;
 
 import it.engineering.web.zadatak.constant.WebConstant;
@@ -16,7 +17,8 @@ public class ActionFactory {
 			
 		case WebConstant.PATH_ADD_PROIZVOD:
 			return new AddProizvodAction();
-			
+		case WebConstant.PATH_DELETE_PROIZVOD:
+			return new DeleteProizvodAction();
 		default:
 			break;
 		}

@@ -33,4 +33,15 @@ public class ProizvodRepository {
 		em.getTransaction().commit();
 		em.close();
 	}
+	public void remove(int sifra) {
+		EntityManager em = MyEntityManagerFactory.getEntityManagerFactory().createEntityManager();
+		Proizvod proizvod = em.find(Proizvod.class,sifra);
+		if(proizvod!=null) {
+			em.getTransaction().begin();
+			em.remove(proizvod);
+			em.getTransaction().commit();
+		}
+		em.close();
+		
+	}
 }

@@ -8,4 +8,5 @@ public interface WebConstant {
 	public static final String PATH_HOME="/home";
 
 	public static final String PATH_ADD_PROIZVOD="/add-proizvod";
+	public static final String PATH_DELETE_PROIZVOD="/delete-proizvod";
 }
