@@ -1,5 +1,7 @@
 package it.engineering.web.zadatak.action.login;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -18,8 +20,13 @@ public class HomeAction extends AbstractAction {
 		
 		UserRepository ur=new UserRepository();
 		String username=request.getParameter("username");
+		String password=request.getParameter("password");
 		User user=ur.findByUsername(username);
-		if(user!=null) 
+		
+		List<User> logedUsers=(List<User>) request.getServletContext().getAttribute("logedUsers");
+		boolean ima=false;
+		if(logedUsers.contains(user)) ima=true; else {logedUsers.add(user);}
+		if(user!=null && !ima) 
 		return WebConstant.PAGE_HOME;
 		return WebConstant.PAGE_INDEX;
 	}
