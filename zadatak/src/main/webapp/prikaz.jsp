@@ -7,11 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Dobrodosao</h2>
-<div>
-	<a href="http://localhost:8080/zadatak/prikaz.jsp">Prikazi sve proizvode</a>
-	<a href="#">Unesi novi proizvod</a>
-	<a href="#">Brisanje proizvoda</a>
-</div>
+
 </body>
 </html>
