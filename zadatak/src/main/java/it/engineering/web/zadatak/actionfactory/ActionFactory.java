@@ -1,6 +1,7 @@
 package it.engineering.web.zadatak.actionfactory;
 
 import it.engineering.web.zadatak.action.AbstractAction;
+import it.engineering.web.zadatak.action.login.AddProizvodAction;
 import it.engineering.web.zadatak.action.login.HomeAction;
 
 import it.engineering.web.zadatak.constant.WebConstant;
@@ -12,6 +13,9 @@ public class ActionFactory {
 		
 		case WebConstant.PATH_HOME:
 			return new HomeAction();
+			
+		case WebConstant.PATH_ADD_PROIZVOD:
+			return new AddProizvodAction();
 			
 		default:
 			break;

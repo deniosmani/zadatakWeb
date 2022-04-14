@@ -6,4 +6,6 @@ public interface WebConstant {
 	
 	public static final String PAGE_HOME="/WEB-INF/home.jsp";
 	public static final String PATH_HOME="/home";
+
+	public static final String PATH_ADD_PROIZVOD="/add-proizvod";
 }
