@@ -136,7 +136,7 @@ input {
 </style>
 </head>
 <body class="flex-center h-cover login">
-	<form action="/zadatak/application/login" method="post">
+	<form action="/zadatak/application/home" method="post">
 	<div class="login-container">
 		<div class="logo">
 			<h1>Company</h1>
