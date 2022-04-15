@@ -41,6 +41,42 @@ public class Proizvod implements Serializable{
 	public Proizvod() {
 		super();
 	}
+	public int getSifra() {
+		return sifra;
+	}
+	public void setSifra(int sifra) {
+		this.sifra = sifra;
+	}
+	public String getNaziv() {
+		return naziv;
+	}
+	public void setNaziv(String naziv) {
+		this.naziv = naziv;
+	}
+	public double getCenaBez() {
+		return cenaBez;
+	}
+	public void setCenaBez(double cenaBez) {
+		this.cenaBez = cenaBez;
+	}
+	public String getJedinica() {
+		return jedinica;
+	}
+	public void setJedinica(String jedinica) {
+		this.jedinica = jedinica;
+	}
+	public double getCenaSa() {
+		return cenaSa;
+	}
+	public void setCenaSa(double cenaSa) {
+		this.cenaSa = cenaSa;
+	}
+	public int getIdPdv() {
+		return IdPdv;
+	}
+	public void setIdPdv(int idPdv) {
+		IdPdv = idPdv;
+	}
 	@Override
 	public int hashCode() {
 		return Objects.hash(IdPdv, cenaBez, cenaSa, jedinica, naziv, sifra);
