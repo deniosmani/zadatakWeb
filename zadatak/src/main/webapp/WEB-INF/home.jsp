@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>Dobrodosao</h2>
+<jsp:include page="/login.jsp" flush="true"/>
 <div>
 	<a href="http://localhost:8080/zadatak/prikaz.jsp">Prikazi sve proizvode</a>
 	<a href="http://localhost:8080/zadatak/unesi-novi.jsp">Unesi novi proizvod</a>
