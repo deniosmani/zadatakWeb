@@ -14,5 +14,6 @@ public interface WebConstant {
 	public static final String PAGE_EDIT_PROIZVOD="/WEB-INF/edit.jsp";
 	
 	public static final String PATH_EDIT_SAVE="/proizvod-save";
+	public static final String PATH_LOGOUT="/logout";
 	
 }

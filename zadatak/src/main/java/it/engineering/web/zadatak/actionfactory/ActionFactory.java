@@ -6,7 +6,7 @@ import it.engineering.web.zadatak.action.login.DeleteProizvodAction;
 import it.engineering.web.zadatak.action.login.EditAction;
 import it.engineering.web.zadatak.action.login.EditSaveAction;
 import it.engineering.web.zadatak.action.login.HomeAction;
-
+import it.engineering.web.zadatak.action.login.LogoutAction;
 import it.engineering.web.zadatak.constant.WebConstant;
 
 public class ActionFactory {
@@ -25,6 +25,8 @@ public class ActionFactory {
 			return new EditAction();
 		case WebConstant.PATH_EDIT_SAVE:
 			return new EditSaveAction();
+		case WebConstant.PATH_LOGOUT:
+			return new LogoutAction();
 		default:
 			break;
 		}
