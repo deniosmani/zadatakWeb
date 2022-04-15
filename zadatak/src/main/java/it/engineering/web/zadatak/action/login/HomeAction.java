@@ -22,11 +22,11 @@ public class HomeAction extends AbstractAction {
 		String username=request.getParameter("username");
 		String password=request.getParameter("password");
 		User user=ur.findByUsername(username);
-		
+		System.out.println(user);
 		List<User> logedUsers=(List<User>) request.getServletContext().getAttribute("logedUsers");
 		boolean ima=false;
-		if(logedUsers.contains(user)) ima=true; else {logedUsers.add(user);}
-		if(user!=null && !ima) 
+		if(user!=null)if(logedUsers.contains(user)) ima=true; else {logedUsers.add(user);}
+		if(user!=null && !ima && user.getPassword().equals(password)) 
 		return WebConstant.PAGE_HOME;
 		return WebConstant.PAGE_INDEX;
 	}

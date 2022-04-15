@@ -35,9 +35,12 @@
 								<th>${proizvod.cenaBez}</th>
 								<th>${proizvod.jedinica}</th>
 								<th>${proizvod.cenaSa}</th>
+					
+								<th><a href="/zadatak/application/proizvod-edit?sifra=${proizvod.sifra}">Edit</a></th>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
+				<a href="http://localhost:8080/zadatak/brisanje-po-sifri.jsp">Brisanje proizvoda</a>
 </body>
 </html>

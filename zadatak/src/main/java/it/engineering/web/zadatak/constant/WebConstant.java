@@ -9,4 +9,10 @@ public interface WebConstant {
 
 	public static final String PATH_ADD_PROIZVOD="/add-proizvod";
 	public static final String PATH_DELETE_PROIZVOD="/delete-proizvod";
+	
+	public static final String PATH_EDIT_PROIZVOD="/proizvod-edit";
+	public static final String PAGE_EDIT_PROIZVOD="/WEB-INF/edit.jsp";
+	
+	public static final String PATH_EDIT_SAVE="/proizvod-save";
+	
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 
+
 import it.engineering.web.zadatak.domain.Proizvod;
 import it.engineering.web.zadatak.domain.User;
 import it.engineering.web.zadatak.persistence.MyEntityManagerFactory;
@@ -24,6 +25,16 @@ public class ProizvodRepository {
 	
 		em.close();
 		return proizvodi;
+	}
+	public Proizvod findBySifra(int sifra) {
+		EntityManager em = MyEntityManagerFactory
+				.getEntityManagerFactory()
+				.createEntityManager();
+		
+		Proizvod proizvod = em.find(Proizvod.class, sifra);
+		System.out.println(proizvod);
+		em.close();
+		return proizvod;
 	}
 	public void save(Proizvod proizvod) {
 		EntityManager em = MyEntityManagerFactory.getEntityManagerFactory().createEntityManager();
