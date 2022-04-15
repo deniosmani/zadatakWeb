@@ -18,17 +18,24 @@ public class HomeAction extends AbstractAction {
 	@Override
 	public String executeRequest(HttpServletRequest request, HttpServletResponse response) {
 		HttpSession session = request.getSession(true);
-		UserRepository ur=new UserRepository();
-		String username=request.getParameter("username");
-		String password=request.getParameter("password");
-		User user=ur.findByUsername(username);
+		UserRepository ur = new UserRepository();
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		User user = ur.findByUsername(username);
 		System.out.println(user);
-		
-		List<User> logedUsers=(List<User>) request.getServletContext().getAttribute("logedUsers");
-		boolean ima=false;
-		if(user!=null)if(logedUsers.contains(user)) ima=true; else {logedUsers.add(user);}
-		if(user!=null && !ima && user.getPassword().equals(password)) {session.setAttribute("loginUser", user);
-		return WebConstant.PAGE_HOME;}
+
+		List<User> logedUsers = (List<User>) request.getServletContext().getAttribute("logedUsers");
+		boolean ima = false;
+		if (user != null)
+			if (logedUsers.contains(user))
+				ima = true;
+			else {
+				logedUsers.add(user);
+			}
+		if (user != null && !ima && user.getPassword().equals(password)) {
+			session.setAttribute("loginUser", user);
+			return WebConstant.PAGE_HOME;
+		}
 		return WebConstant.PAGE_INDEX;
 	}
 }
