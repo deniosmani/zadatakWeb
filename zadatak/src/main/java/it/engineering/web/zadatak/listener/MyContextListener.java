@@ -34,7 +34,7 @@ public class MyContextListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce)  { 
          // TODO Auto-generated method stub
     	List<User> list=new ArrayList<>();
-    	sce.getServletContext().setAttribute("logedUsers", list );
+    	sce.getServletContext().setAttribute("logedUsers", list);
     }
 	
 }
