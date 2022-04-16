@@ -8,6 +8,7 @@ public interface WebConstant {
 	public static final String PATH_HOME="/home";
 
 	public static final String PATH_ADD_PROIZVOD="/add-proizvod";
+	public static final String PAGE_DELETE_PROIZVOD="/brisanje-po-sifri.jsp";
 	public static final String PATH_DELETE_PROIZVOD="/delete-proizvod";
 	
 	public static final String PATH_EDIT_PROIZVOD="/proizvod-edit";

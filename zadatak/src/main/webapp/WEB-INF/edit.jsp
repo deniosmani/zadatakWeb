@@ -32,6 +32,7 @@ div{
 </head>
 <body>
 	<div id="container">
+	<p>${error}</p>
 	<form method="post" action="/zadatak/application/proizvod-save">
 		<label>Sifra</label> <input type="text" name="sifra"
 			value="${proizvod.sifra}" readonly="readonly" /><br> <label>Naziv</label>

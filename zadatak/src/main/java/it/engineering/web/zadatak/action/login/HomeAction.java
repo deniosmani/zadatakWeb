@@ -38,6 +38,7 @@ public class HomeAction extends AbstractAction {
 			session.setAttribute("loginUser", user);
 			return WebConstant.PAGE_HOME;
 		}
+		request.setAttribute("error", "Pogresni podaci");
 		System.out.println("lozinka");
 		return WebConstant.PAGE_INDEX;
 	}

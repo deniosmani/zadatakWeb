@@ -142,6 +142,7 @@ input {
 			<h1>Company</h1>
 			<small>HELLO WORLD</small>
 		</div>
+		<p>${error}</p>
 		<div class="input input-floating">
 			<input type="text" name="username" id="username" placeholder=" ">
 			<label for="username" class="floating-label">Username</label>

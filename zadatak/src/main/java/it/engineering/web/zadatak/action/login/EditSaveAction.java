@@ -12,7 +12,7 @@ public class EditSaveAction extends AbstractAction{
 
 	@Override
 	public String executeRequest(HttpServletRequest request, HttpServletResponse response) {
-		int sifra=Integer.parseInt(request.getParameter("sifra"));
+		try{int sifra=Integer.parseInt(request.getParameter("sifra"));
 		String naziv=request.getParameter("naziv");
 		double cenaBez=Double.parseDouble(request.getParameter("cenaBez"));
 		String jedinica=request.getParameter("jedinica");
@@ -21,7 +21,13 @@ public class EditSaveAction extends AbstractAction{
 		Proizvod proizvod = new Proizvod(sifra, naziv, cenaBez, jedinica, 1.2*cenaBez, 1);
 		pr.remove(sifra);
 		pr.save(proizvod);
-		return WebConstant.PAGE_HOME;
+		return WebConstant.PAGE_HOME;}catch (Exception e) {
+			ProizvodRepository pr=new ProizvodRepository();
+			Proizvod proizvod=pr.findBySifra(Integer.parseInt(request.getParameter("sifra")));
+			request.setAttribute("proizvod", proizvod);
+			request.setAttribute("error", "pogresan unos");
+			return WebConstant.PAGE_EDIT_PROIZVOD;
+		}
 	}
 
 }

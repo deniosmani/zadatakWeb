@@ -11,9 +11,13 @@ public class DeleteProizvodAction extends AbstractAction{
 
 	@Override
 	public String executeRequest(HttpServletRequest request, HttpServletResponse response) {
-		int sifra=Integer.parseInt( request.getParameter("sifra"));
+		try{int sifra=Integer.parseInt( request.getParameter("sifra"));
 		ProizvodRepository pr=new ProizvodRepository();
-		pr.remove(sifra);
+		pr.remove(sifra);} catch (Exception e) {
+			System.out.println("uso");
+			request.setAttribute("error", "pogresan podatak");
+			return WebConstant.PAGE_DELETE_PROIZVOD;
+		}
 		return WebConstant.PAGE_HOME;
 	}
 
