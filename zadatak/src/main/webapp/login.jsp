@@ -6,7 +6,6 @@
 
 <c:url value="/application/logout" var="urlLogout"></c:url>
 
-<div>
-	prijavljeni ste kao: ${sessionScope.loginUser.username}, <a href="${urlLogout}">Odjavite se</a>
+
+	Prijavljeni ste kao: ${sessionScope.loginUser.username} <span><a href="${urlLogout}">Odjavite se</a></span>
 	
-</div>

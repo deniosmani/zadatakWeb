@@ -26,16 +26,19 @@ public class HomeAction extends AbstractAction {
 
 		List<User> logedUsers = (List<User>) request.getServletContext().getAttribute("logedUsers");
 		boolean ima = false;
-		if (user != null)
-			if (logedUsers.contains(user))
+		if (user != null && user.getPassword().equals(password))
+			if (logedUsers.contains(user)) {
 				ima = true;
+				System.out.println("u listi ");}
 			else {
+				System.out.println("nije u listi");
 				logedUsers.add(user);
 			}
 		if (user != null && !ima && user.getPassword().equals(password)) {
 			session.setAttribute("loginUser", user);
 			return WebConstant.PAGE_HOME;
 		}
+		System.out.println("lozinka");
 		return WebConstant.PAGE_INDEX;
 	}
 }

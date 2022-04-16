@@ -9,7 +9,7 @@
 body {
 	background-image: url("https://www.ppt-backgrounds.net/thumbs/white-and-light-purple-download-downloads-backgrounds.jpg");
 	margin: 0;
-	 background-repeat: no-repeat;
+	background-repeat: no-repeat;
     background-size: 100% 100%;
 	heigth: 100vh;
 }
@@ -17,12 +17,13 @@ html {
 	height:100vh;
 }
 div{
-	
+	heigth: 100vh;
 }
+
 #container {
 	display: flex;
-	width:100%;
-	heigth:100vh;
+	width: 100%;
+	heigth: 100vh;
 	align-items: center;
 	justify-content:center;
 	flex-direction: column;
@@ -31,6 +32,7 @@ div{
 </head>
 <body>
 <jsp:include page="/login.jsp" flush="true"/>
+
 <div id="container">
 	<a href="http://localhost:8080/zadatak/prikaz.jsp">Prikazi sve proizvode</a>
 	<a href="http://localhost:8080/zadatak/unesi-novi.jsp">Unesi novi proizvod</a>
