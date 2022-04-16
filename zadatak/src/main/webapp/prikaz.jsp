@@ -1,11 +1,13 @@
 <%@page
 	import="it.engineering.web.zadatak.repository.ProizvodRepository"%>
+	<%@page import="it.engineering.web.zadatak.constant.WebConstant"%>
 <%@page import="it.engineering.web.zadatak.domain.Proizvod"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page import="it.engineering.web.zadatak.domain.User"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,6 +41,13 @@ div{
 </style>
 </head>
 <body>
+<% HttpSession session1 = request.getSession();
+	User user=(User)session1.getAttribute("loginUser");
+	System.out.println(user);
+	if(user==null){
+		request.getRequestDispatcher(WebConstant.PAGE_INDEX).forward(request, response);
+	}
+%>
 	<%
 	ProizvodRepository ur = new ProizvodRepository();
 	List<Proizvod> lista = ur.getAll();

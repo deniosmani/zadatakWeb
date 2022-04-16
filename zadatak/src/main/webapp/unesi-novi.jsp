@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+   <%@page import="it.engineering.web.zadatak.domain.User"%>
+   <%@page import="it.engineering.web.zadatak.constant.WebConstant"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,6 +34,13 @@ div{
 </head>
 
 <body>
+<% HttpSession session1 = request.getSession();
+	User user=(User)session1.getAttribute("loginUser");
+	System.out.println(user);
+	if(user==null){
+		request.getRequestDispatcher(WebConstant.PAGE_INDEX).forward(request, response);
+	}
+%>
 <div id="container">
 <form action="/zadatak/application/add-proizvod" method="post">
 		
