@@ -2,6 +2,8 @@
     pageEncoding="ISO-8859-1"%>
    <%@page import="it.engineering.web.zadatak.domain.User"%>
    <%@page import="it.engineering.web.zadatak.constant.WebConstant"%>
+   <%@page isELIgnored="false"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +46,7 @@ div{
 <div id="container">
 <form action="/zadatak/application/add-proizvod" method="post">
 		
-			
+			<p>${error}</p>
 			sifra:
 			
 				<input type="text" name="sifra" >

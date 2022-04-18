@@ -17,4 +17,6 @@ public interface WebConstant {
 	public static final String PATH_EDIT_SAVE="/proizvod-save";
 	public static final String PATH_LOGOUT="/logout";
 	
+	public static final String PAGE_SAVE="/unesi-novi.jsp";
+	
 }

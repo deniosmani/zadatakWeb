@@ -12,7 +12,7 @@ public class AddProizvodAction extends AbstractAction {
 
 	@Override
 	public String executeRequest(HttpServletRequest request, HttpServletResponse response) {
-		
+		try {
 		int sifra=Integer.parseInt(request.getParameter("sifra"));
 		String naziv=request.getParameter("naziv");
 		double cenaBez=Double.parseDouble(request.getParameter("cenaBez"));
@@ -20,7 +20,10 @@ public class AddProizvodAction extends AbstractAction {
 		Proizvod proizvod=new Proizvod(sifra, naziv, cenaBez, jedinica, cenaBez*1.2, 1);
 		ProizvodRepository pr=new ProizvodRepository();
 		pr.save(proizvod);
-		return WebConstant.PAGE_HOME;
+		return WebConstant.PAGE_HOME; } catch (Exception e) {
+			request.setAttribute("error", "pogresni podaci");
+			return WebConstant.PAGE_SAVE;
+		}
 	}
 
 }
